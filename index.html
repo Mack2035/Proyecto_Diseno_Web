@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Pulso Urbano, tienda online de accesorios para entrenamiento y bienestar urbano.">
+  <title>Pulso Urbano | Tienda fitness urbana</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body data-base="">
+  <!-- Tema relacionado: Semana 9 - estructura HTML donde luego se vincula JavaScript. -->
+  <header class="site-header">
+    <nav class="navbar" aria-label="Navegacion principal">
+      <a class="brand" href="index.html" aria-label="Pulso Urbano inicio">
+        <img src="img/logo.svg" alt="Logotipo de Pulso Urbano">
+        <span>Pulso Urbano</span>
+      </a>
+      <button class="nav-toggle" type="button" aria-label="Abrir menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <ul class="nav-links">
+        <li><a class="active" href="index.html">Inicio</a></li>
+        <li><a href="pages/catalogo.html">Catalogo</a></li>
+        <li><a href="pages/contacto.html">Contacto</a></li>
+        <li>
+          <a class="cart-link" href="pages/carrito.html" aria-label="Ver carrito">
+            Carrito
+            <span class="cart-count" data-cart-count>0</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Tema relacionado: rubrica del proyecto - presentacion de marca y banner principal. -->
+    <section class="hero">
+      <div class="hero-content">
+        <p class="eyebrow">Equipamiento para moverte mejor</p>
+        <h1>Pulso Urbano</h1>
+        <p class="hero-copy">Accesorios compactos, resistentes y listos para entrenar en casa, en ruta o entre clases.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="pages/catalogo.html">Comprar ahora</a>
+          <a class="btn btn-secondary" href="pages/contacto.html">Pedir asesoria</a>
+        </div>
+      </div>
+      <figure class="hero-visual">
+        <img src="img/hero-training.svg" alt="Accesorios deportivos de Pulso Urbano">
+      </figure>
+    </section>
+
+    <!-- Tema relacionado: Semana 11 - este contenedor recibe productos desde un array en JS. -->
+    <section class="section section-soft" aria-labelledby="featured-title">
+      <div class="section-heading">
+        <p class="eyebrow">Seleccion destacada</p>
+        <h2 id="featured-title">Productos que salen rapido de la mochila</h2>
+      </div>
+      <div class="product-grid" id="featured-products" aria-live="polite"></div>
+    </section>
+
+    <!-- Tema relacionado: rubrica del proyecto - identidad visual y descripcion del negocio. -->
+    <section class="section split-section" aria-labelledby="identity-title">
+      <div>
+        <p class="eyebrow">Identidad de marca</p>
+        <h2 id="identity-title">Para estudiantes y profesionales que entrenan sin pausar su dia</h2>
+      </div>
+      <div class="feature-list">
+        <article>
+          <h3>Compacto</h3>
+          <p>Productos pensados para espacios pequenos, transporte publico y rutinas cortas.</p>
+        </article>
+        <article>
+          <h3>Durable</h3>
+          <p>Materiales resistentes para uso diario, con garantia clara y soporte cercano.</p>
+        </article>
+        <article>
+          <h3>Flexible</h3>
+          <p>Opciones para fuerza, movilidad, cardio y recuperacion en un solo catalogo.</p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <!-- Tema relacionado: buenas practicas - pie de pagina comun del sitio. -->
+  <footer class="site-footer">
+    <p>&copy; 2026 Pulso Urbano. Proyecto academico de comercio electronico.</p>
+  </footer>
+
+  <!-- Tema relacionado: Semana 9 - vinculacion de archivos JavaScript externos al HTML. -->
+  <script src="js/products.js"></script>
+  <script src="js/cart-store.js"></script>
+  <script src="js/common.js"></script>
+  <script src="js/home.js"></script>
+</body>
+</html>

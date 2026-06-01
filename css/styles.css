@@ -1,0 +1,349 @@
+/* Tema del proyecto: variables CSS para manejar la paleta y medidas principales. */
+:root {
+  --primary: #0f766e;
+  --secondary: #e11d48;
+  --accent: #facc15;
+  --dark: #172033;
+  --muted: #64748b;
+  --light: #f4f7f8;
+  --white: #ffffff;
+  --line: #d7dee8;
+  --radius: 8px;
+  --max: 1100px;
+}
+
+* { box-sizing: border-box; }
+
+/* Tema del proyecto: estilos generales para todo el sitio. */
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  color: var(--dark);
+  background: var(--white);
+  line-height: 1.6;
+}
+
+img { display: block; max-width: 100%; }
+a { color: inherit; text-decoration: none; }
+button, input, select, textarea { font: inherit; }
+h1, h2, h3, p { margin-top: 0; }
+h1 { margin-bottom: 12px; font-size: 3rem; line-height: 1; }
+h2 { font-size: 1.8rem; }
+
+/* Tema del proyecto: cabecera fija y navegacion principal. */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: var(--white);
+  border-bottom: 1px solid var(--line);
+}
+
+.navbar {
+  max-width: var(--max);
+  margin: auto;
+  padding: 12px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.brand, .nav-links, .hero-actions, .card-actions, .product-bottom, .check-field {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.brand { font-weight: bold; }
+.brand img { width: 40px; }
+
+.nav-links {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 8px;
+}
+
+.nav-links a {
+  padding: 8px 10px;
+  border-radius: var(--radius);
+  color: var(--muted);
+  font-weight: bold;
+}
+
+.nav-links a:hover, .nav-links a.active {
+  color: var(--primary);
+  background: #e8f5f3;
+}
+
+.cart-count {
+  min-width: 22px;
+  margin-left: 4px;
+  padding: 1px 6px;
+  border-radius: 20px;
+  background: var(--secondary);
+  color: var(--white);
+  font-size: 0.8rem;
+  text-align: center;
+}
+
+.nav-toggle {
+  display: none;
+  width: 42px;
+  height: 38px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--white);
+}
+
+.nav-toggle span {
+  display: block;
+  width: 22px;
+  height: 2px;
+  margin: 5px auto;
+  background: var(--dark);
+}
+
+/* Tema del proyecto: banner principal y encabezados de cada pagina. */
+.hero, .page-hero {
+  padding: 48px 16px;
+  background: #102330;
+  color: var(--white);
+}
+
+.hero {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 30px;
+}
+
+.hero-content { max-width: 540px; justify-self: end; }
+.hero-visual { margin: 0; animation: flotar 4s ease-in-out infinite; }
+.hero-visual img { max-width: 430px; }
+.hero .hero-copy { color: #d8e4e8; }
+
+.page-hero { background: #e8f5f3; color: var(--dark); }
+.page-hero > * { max-width: var(--max); margin-left: auto; margin-right: auto; }
+
+/* Tema del proyecto: secciones con ancho maximo para ordenar el contenido. */
+.section {
+  max-width: var(--max);
+  margin: auto;
+  padding: 46px 16px;
+}
+
+.section-soft { max-width: none; background: var(--light); }
+.section-soft .section-heading, .section-soft .product-grid {
+  max-width: var(--max);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Tema del proyecto: uso de CSS Grid para distribuir columnas. */
+.split-section, .catalog-layout, .cart-section, .form-layout, .product-detail {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+.feature-list, .product-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+
+/* Tema del proyecto: estilos simples para tarjetas y paneles. */
+.feature-list article, .product-card, .filters, .cart-summary, .support-panel, .product-detail, .empty-state {
+  padding: 18px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--white);
+}
+
+.eyebrow, .product-category {
+  color: var(--secondary);
+  font-size: 0.8rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.hero .eyebrow { color: var(--accent); }
+.page-hero p, .product-info p, .filter-result, .cart-item p, .support-panel li { color: var(--muted); }
+
+/* Tema relacionado: Semana 11 - tarjetas que muestran objetos del array PRODUCTS. */
+.product-card {
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s;
+}
+
+.product-card:hover { transform: translateY(-4px); }
+
+.product-image {
+  min-height: 170px;
+  margin: -18px -18px 16px;
+  display: grid;
+  place-items: center;
+  background: #edf5f4;
+  border-radius: var(--radius) var(--radius) 0 0;
+}
+
+.product-image img { max-height: 145px; }
+.product-info { display: flex; flex: 1; flex-direction: column; }
+.product-bottom { justify-content: space-between; margin-top: auto; flex-wrap: wrap; }
+.hero-actions, .card-actions { flex-wrap: wrap; }
+
+/* Tema del proyecto: botones reutilizables para acciones del sitio. */
+.btn, .btn-icon {
+  border: 0;
+  border-radius: var(--radius);
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.2s;
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 16px;
+  background: var(--primary);
+  color: var(--white);
+  text-align: center;
+}
+
+.btn:hover { background: #115e59; }
+.btn-secondary, .btn-light {
+  border: 1px solid var(--line);
+  background: var(--white);
+  color: var(--dark);
+}
+
+.btn-small { padding: 8px 10px; font-size: 0.9rem; }
+.btn-icon { width: 38px; height: 38px; background: var(--secondary); color: var(--white); }
+.full-width { width: 100%; }
+
+/* Tema del proyecto: campos de formulario y filtros del catalogo. */
+label {
+  display: block;
+  margin: 12px 0 6px;
+  font-weight: bold;
+}
+
+input, select, textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+}
+
+input:focus, select:focus, textarea:focus {
+  outline: 2px solid #b7dcd8;
+}
+
+/* Tema relacionado: Semana 9 - seccion que JavaScript cambia para mostrar detalle. */
+.product-detail-section { padding-top: 0; }
+.product-detail { background: var(--light); }
+.product-detail img { max-height: 220px; margin: auto; }
+
+/* Tema relacionado: Semana 9 y 11 - carrito generado con JavaScript desde arrays. */
+.cart-list, .contact-form {
+  display: grid;
+  gap: 14px;
+}
+
+.cart-item {
+  display: grid;
+  grid-template-columns: 80px 1fr 110px 90px 36px;
+  gap: 12px;
+  align-items: center;
+  padding: 12px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+}
+
+.cart-item img {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  background: var(--light);
+}
+
+.summary-line {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 0;
+  border-bottom: 1px solid var(--line);
+}
+
+/* Tema relacionado: Semana 9 - estilos para validacion visual del formulario. */
+.total-line { border-bottom: 0; font-size: 1.2rem; }
+.check-field { align-items: flex-start; }
+.check-field input { width: auto; margin-top: 5px; }
+.error-message { min-height: 18px; color: var(--secondary); font-size: 0.9rem; }
+.success-message { color: var(--primary); font-weight: bold; }
+.field-error { border-color: var(--secondary); background: #fff1f3; }
+.field-ok { border-color: var(--primary); }
+
+/* Tema relacionado: Semana 9 - mensaje creado y eliminado desde JavaScript. */
+.toast {
+  position: fixed;
+  right: 16px;
+  bottom: 16px;
+  padding: 12px 14px;
+  border-radius: var(--radius);
+  background: var(--dark);
+  color: var(--white);
+}
+
+/* Tema del proyecto: pie de pagina comun. */
+.site-footer {
+  padding: 24px 16px;
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+  text-align: center;
+}
+
+.site-footer p { margin: 0; }
+
+/* Tema del proyecto: animacion CSS sencilla para cumplir la rubrica. */
+@keyframes flotar {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+/* Tema del proyecto: media query para tablet y pantallas medianas. */
+@media (max-width: 800px) {
+  .nav-toggle { display: block; }
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 65px;
+    left: 0;
+    right: 0;
+    padding: 12px 16px;
+    background: var(--white);
+    border-bottom: 1px solid var(--line);
+  }
+
+  .nav-links.open { display: block; }
+  .nav-links li { margin-bottom: 8px; }
+  .hero, .split-section, .catalog-layout, .cart-section, .form-layout, .product-detail {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-content { justify-self: start; }
+  .feature-list, .product-grid { grid-template-columns: 1fr 1fr; }
+  .cart-item { grid-template-columns: 70px 1fr; }
+  .cart-item label, .cart-item strong, .cart-item button { grid-column: 1 / -1; }
+}
+
+/* Tema del proyecto: media query para celulares. */
+@media (max-width: 480px) {
+  h1 { font-size: 2.2rem; }
+  .feature-list, .product-grid { grid-template-columns: 1fr; }
+  .product-bottom, .card-actions, .hero-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}

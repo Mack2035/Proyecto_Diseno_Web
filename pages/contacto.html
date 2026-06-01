@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Formulario de contacto y pre-checkout de Pulso Urbano con validacion JavaScript.">
+  <title>Contacto | Pulso Urbano</title>
+  <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body data-base="../">
+  <!-- Tema relacionado: Semana 9 - estructura HTML base para una pagina con formulario. -->
+  <header class="site-header">
+    <nav class="navbar" aria-label="Navegacion principal">
+      <a class="brand" href="../index.html" aria-label="Pulso Urbano inicio">
+        <img src="../img/logo.svg" alt="Logotipo de Pulso Urbano">
+        <span>Pulso Urbano</span>
+      </a>
+      <button class="nav-toggle" type="button" aria-label="Abrir menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <ul class="nav-links">
+        <li><a href="../index.html">Inicio</a></li>
+        <li><a href="catalogo.html">Catalogo</a></li>
+        <li><a class="active" href="contacto.html">Contacto</a></li>
+        <li>
+          <a class="cart-link" href="carrito.html" aria-label="Ver carrito">
+            Carrito
+            <span class="cart-count" data-cart-count>0</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Tema relacionado: rubrica del proyecto - pagina de contacto o pre-checkout. -->
+    <section class="page-hero">
+      <p class="eyebrow">Pre-checkout</p>
+      <h1>Cu&eacute;ntanos que necesitas</h1>
+      <p>Validamos tus datos antes de enviar la solicitud para preparar una recomendacion precisa.</p>
+    </section>
+
+    <!-- Tema relacionado: Semana 9 - formulario que sera validado con JavaScript. -->
+    <section class="section form-layout" aria-labelledby="form-title">
+      <article class="support-panel">
+        <h2 id="form-title">Asesoria rapida</h2>
+        <p>Comparte tus datos y el tipo de rutina. El equipo de Pulso Urbano respondera con una seleccion ajustada a tu espacio, presupuesto y frecuencia de entrenamiento.</p>
+        <ul>
+          <li>Respuesta estimada: 24 horas.</li>
+          <li>Opciones para entrega local.</li>
+          <li>Recomendacion segun nivel.</li>
+        </ul>
+      </article>
+
+      <!-- Tema relacionado: Semana 9 - campos de entrada para validar con condicionales en JS. -->
+      <form class="contact-form" id="contact-form" novalidate>
+        <div class="form-field">
+          <label for="name">Nombre completo</label>
+          <input id="name" name="name" type="text" autocomplete="name">
+          <small class="error-message" data-error-for="name"></small>
+        </div>
+
+        <div class="form-field">
+          <label for="email">Correo electronico</label>
+          <input id="email" name="email" type="email" autocomplete="email">
+          <small class="error-message" data-error-for="email"></small>
+        </div>
+
+        <div class="form-field">
+          <label for="phone">Celular</label>
+          <input id="phone" name="phone" type="tel" autocomplete="tel">
+          <small class="error-message" data-error-for="phone"></small>
+        </div>
+
+        <div class="form-field">
+          <label for="goal">Objetivo principal</label>
+          <select id="goal" name="goal">
+            <option value="">Selecciona una opcion</option>
+            <option value="fuerza">Ganar fuerza</option>
+            <option value="cardio">Mejorar cardio</option>
+            <option value="movilidad">Mejorar movilidad</option>
+            <option value="regalo">Comprar un regalo</option>
+          </select>
+          <small class="error-message" data-error-for="goal"></small>
+        </div>
+
+        <div class="form-field">
+          <label for="message">Mensaje</label>
+          <textarea id="message" name="message" rows="5" placeholder="Ej: entreno tres veces por semana y tengo poco espacio"></textarea>
+          <small class="error-message" data-error-for="message"></small>
+        </div>
+
+        <label class="check-field" for="terms">
+          <input id="terms" name="terms" type="checkbox">
+          <span>Acepto ser contactado para recibir la recomendacion.</span>
+        </label>
+        <small class="error-message" data-error-for="terms"></small>
+
+        <button class="btn btn-primary full-width" type="submit">Enviar solicitud</button>
+        <p class="success-message" id="form-success" role="status"></p>
+      </form>
+    </section>
+  </main>
+
+  <!-- Tema relacionado: buenas practicas - pie de pagina comun del sitio. -->
+  <footer class="site-footer">
+    <p>&copy; 2026 Pulso Urbano. Proyecto academico de comercio electronico.</p>
+  </footer>
+
+  <!-- Tema relacionado: Semana 9 - scripts externos para separar estructura y comportamiento. -->
+  <script src="../js/products.js"></script>
+  <script src="../js/cart-store.js"></script>
+  <script src="../js/common.js"></script>
+  <script src="../js/contact-form.js"></script>
+</body>
+</html>

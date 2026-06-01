@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 320" role="img" aria-labelledby="title desc">
+  <title id="title">Audifonos Beat Clip</title>
+  <desc id="desc">Audifonos deportivos con estuche compacto</desc>
+  <rect width="420" height="320" rx="18" fill="#edf5f4"/>
+  <rect x="134" y="160" width="152" height="90" rx="32" fill="#ffffff"/>
+  <circle cx="172" cy="205" r="22" fill="#0f766e"/>
+  <circle cx="248" cy="205" r="22" fill="#e11d48"/>
+  <path d="M138 154c10-36 38-58 72-58s62 22 72 58" fill="none" stroke="#102330" stroke-width="14" stroke-linecap="round"/>
+  <path d="M129 137c-30 8-48 34-45 64 2 24 20 40 42 39" fill="none" stroke="#0f766e" stroke-width="16" stroke-linecap="round"/>
+  <path d="M291 137c30 8 48 34 45 64-2 24-20 40-42 39" fill="none" stroke="#e11d48" stroke-width="16" stroke-linecap="round"/>
+  <rect x="178" y="226" width="64" height="12" rx="6" fill="#facc15"/>
+</svg>

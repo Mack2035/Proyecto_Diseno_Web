@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 320" role="img" aria-labelledby="title desc">
+  <title id="title">Banda Force Set</title>
+  <desc id="desc">Bandas elasticas de resistencia en tres colores</desc>
+  <rect width="420" height="320" rx="18" fill="#edf5f4"/>
+  <ellipse cx="190" cy="158" rx="112" ry="62" fill="none" stroke="#0f766e" stroke-width="26"/>
+  <ellipse cx="232" cy="162" rx="116" ry="66" fill="none" stroke="#e11d48" stroke-width="22"/>
+  <ellipse cx="210" cy="178" rx="86" ry="48" fill="none" stroke="#facc15" stroke-width="19"/>
+  <rect x="86" y="222" width="248" height="26" rx="13" fill="#102330"/>
+</svg>

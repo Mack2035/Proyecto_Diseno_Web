@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Catalogo de productos de Pulso Urbano con busqueda, filtros y detalle individual.">
+  <title>Catalogo | Pulso Urbano</title>
+  <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body data-base="../">
+  <!-- Tema relacionado: Semana 9 - estructura HTML base para navegar entre paginas. -->
+  <header class="site-header">
+    <nav class="navbar" aria-label="Navegacion principal">
+      <a class="brand" href="../index.html" aria-label="Pulso Urbano inicio">
+        <img src="../img/logo.svg" alt="Logotipo de Pulso Urbano">
+        <span>Pulso Urbano</span>
+      </a>
+      <button class="nav-toggle" type="button" aria-label="Abrir menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <ul class="nav-links">
+        <li><a href="../index.html">Inicio</a></li>
+        <li><a class="active" href="catalogo.html">Catalogo</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+        <li>
+          <a class="cart-link" href="carrito.html" aria-label="Ver carrito">
+            Carrito
+            <span class="cart-count" data-cart-count>0</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Tema relacionado: rubrica del proyecto - titulo de la pagina de catalogo. -->
+    <section class="page-hero">
+      <p class="eyebrow">Catalogo dinamico</p>
+      <h1>Elige tu siguiente impulso</h1>
+      <p>Busca por nombre o filtra por categoria. Cada tarjeta se genera desde JavaScript.</p>
+    </section>
+
+    <!-- Tema relacionado: Semana 9 y 11 - filtros HTML conectados con arrays en JavaScript. -->
+    <section class="section catalog-layout" aria-labelledby="catalog-title">
+      <aside class="filters" aria-label="Filtros de productos">
+        <h2 id="catalog-title">Productos</h2>
+        <label for="search-product">Buscar</label>
+        <input id="search-product" type="search" placeholder="Ej: mochila, banda">
+
+        <label for="category-filter">Categoria</label>
+        <select id="category-filter">
+          <option value="todos">Todas</option>
+        </select>
+
+        <p class="filter-result" id="filter-result">Mostrando todos los productos</p>
+      </aside>
+
+      <div class="product-grid" id="catalog-products" aria-live="polite"></div>
+    </section>
+
+    <!-- Tema relacionado: Semana 9 - JavaScript modifica esta seccion para mostrar el detalle. -->
+    <section class="section product-detail-section" aria-labelledby="detail-title">
+      <h2 id="detail-title">Detalle del producto</h2>
+      <article class="product-detail" id="product-detail"></article>
+    </section>
+  </main>
+
+  <!-- Tema relacionado: buenas practicas - pie de pagina comun del sitio. -->
+  <footer class="site-footer">
+    <p>&copy; 2026 Pulso Urbano. Proyecto academico de comercio electronico.</p>
+  </footer>
+
+  <!-- Tema relacionado: Semana 9 - scripts externos para separar HTML y comportamiento. -->
+  <script src="../js/products.js"></script>
+  <script src="../js/cart-store.js"></script>
+  <script src="../js/common.js"></script>
+  <script src="../js/catalog.js"></script>
+</body>
+</html>

@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 320" role="img" aria-labelledby="title desc">
+  <title id="title">Zapatillas Volt Runner</title>
+  <desc id="desc">Zapatilla deportiva blanca con detalle verde y amarillo</desc>
+  <rect width="420" height="320" rx="18" fill="#edf5f4"/>
+  <path d="M70 204c45-48 98-65 168-39 38 14 64 12 102-5 14-6 28 6 23 21l-13 40c-6 20-24 33-45 33H105c-32 0-52-26-35-50z" fill="#ffffff"/>
+  <path d="M112 200c34-28 74-34 120-16" fill="none" stroke="#102330" stroke-width="17" stroke-linecap="round"/>
+  <path d="M238 174l30 47" fill="none" stroke="#0f766e" stroke-width="13" stroke-linecap="round"/>
+  <path d="M284 165l44 58" fill="none" stroke="#e11d48" stroke-width="12" stroke-linecap="round"/>
+  <rect x="96" y="246" width="236" height="22" rx="11" fill="#facc15"/>
+</svg>
